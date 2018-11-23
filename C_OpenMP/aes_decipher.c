@@ -237,7 +237,6 @@ void decipher_control(byte *file_in, byte *file_out, int padding, unsigned long 
     for(block = 0; block < blocks; block++) {
         // Invoke the cipher process for the corresponding block
         decipher(file_in + block * 16, expanded_key);
-
         // Check if it is necessary to remove padding from the last block
         if(block == (blocks - 1) && padding > 0) {
             // Copy the encrypted block to the output file removing the padding
