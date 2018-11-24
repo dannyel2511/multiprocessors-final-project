@@ -28,7 +28,7 @@ void read_key_from_file(byte *key) {
        return;
    }
 
-   fgets(buffer, 16, (FILE*)fp);
+   fgets(buffer, 17, (FILE*)fp);
    for(i = 0;i < 16;i++) {
       key[i]=buffer[i];
    }                                                                                                                
